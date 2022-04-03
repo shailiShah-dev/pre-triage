@@ -1,0 +1,34 @@
+/*
+  Name: Shaili Bharatkumar Shah
+  Email: sbshah6@myseneca.ca
+  Student ID: 139046205
+  Date of completion: 26th July 2021
+*/
+
+// Workshop 9:
+// Car.h
+// 2021-06-03
+// Version: 1.0 
+// Author: Fardad Soleimanloo
+/////////////////////////////////////////////
+#include <iostream>
+#ifndef SDDS_CAR_H_
+#define SDDS_CAR_H_
+#include "ReadWrite.h"
+namespace sdds {
+   class Car : public ReadWrite {
+      char m_plate[9];
+      char m_makeModel[41];
+   public:
+      Car(const char* plate = "", const char* makeModel = "");
+      void set(const char* plate, const char* makeModel);
+      std::ostream& display(std::ostream& os)const;
+      std::istream& read(std::istream& is);
+      bool operator==(const char* mmSubstr)const;
+   };
+
+
+}
+#endif // !SDDS_CAR_H_
+
+/*I have done all the coding by myself and only copied the code that my professor provided to complete my workshops and assignments.*/
